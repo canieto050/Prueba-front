@@ -1,0 +1,35 @@
+<form [formGroup]="formulario" (ngSubmit)="insertar()">
+
+    <div>
+        <label for="nombres">Nombres</label>
+        <input formControlName="nombres" class="uk-input" type="text" />
+
+    </div>
+    <br>
+    <div>
+        <label for="apellidos">Apellidos</label>
+        <input formControlName="apellidos" class="uk-input" type="text" />
+
+    </div>
+    <br>
+    <div>
+        <label for="telefono">Telefono</label>
+        <input formControlName="telefono" class="uk-input" type="number" />
+
+    </div>
+    <br>
+    <div>
+        <label for="correo">Correo</label>
+        <input formControlName="correo" class="uk-input" type="email" />
+
+    </div>
+    <br>
+    <div>
+        <label for="direccion">Direccion</label>
+        <input formControlName="direccion" class="uk-input" type="text" />
+    </div>
+    <br>
+    <div>
+        <button type="submit" [disabled]="!formulario.value">enviar</button>
+    </div>
+</form>

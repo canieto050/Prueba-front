@@ -1,0 +1,56 @@
+<button routerLink="/insertar">crear</button>
+
+<table>
+    <tr>
+        <th>
+            nombres
+        </th>
+        <th>
+            apellidos
+        </th>
+        <th>
+            telefono
+        </th>
+        <th>
+            direccion
+        </th>
+        <th>
+            correo
+        </th>
+        <th>
+            estado
+        </th>
+        <th>
+            editar
+        </th>
+        <th>
+            eliminar
+        </th>
+    </tr>
+    <tr *ngFor="let dato of listarUsuarios">
+        <td>
+            {{dato.nombres}}
+        </td>
+        <td>
+            {{dato.apellidos}}
+        </td>
+        <td>
+            {{dato.telefono}}
+        </td>
+        <td>
+            {{dato.direccion}}
+        </td>
+        <td>
+            {{dato.correo}}
+        </td>
+        <td *ngIf="dato.eliminado == 0">
+            Activo
+        </td>
+        <td>
+            <button routerLink="/actualizar/{{dato.id}}">update</button>
+        </td>
+        <td>
+            <button (click)="eliminar(dato.id)">eliminar</button>
+        </td>
+    </tr>
+</table>

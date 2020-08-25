@@ -1,0 +1,46 @@
+<form [formGroup]="formulario" (ngSubmit)="actualizar()">
+
+
+    <div>
+        <label for="nombres">Nombres </label>
+        <input formControlName="nombres" class="uk-input" type="text" [(ngModel)]="datax.nombres" />
+
+    </div>
+    <br>
+    <div>
+        <label for="apellidos">Apellidos</label>
+        <input formControlName="apellidos" class="uk-input" type="text" [(ngModel)]="datax.apellidos" />
+
+    </div>
+    <br>
+    <div>
+        <label for="telefono">Telefono</label>
+        <input formControlName="telefono" class="uk-input" type="number" [(ngModel)]="datax.telefono" />
+
+    </div>
+    <br>
+    <div>
+        <label for="correo">Correo</label>
+        <input formControlName="correo" class="uk-input" type="email" [(ngModel)]="datax.correo" />
+
+    </div>
+    <br>
+    <div>
+        <label for="direccion">Direccion</label>
+        <input formControlName="direccion" class="uk-input" type="text" [(ngModel)]="datax.direccion" />
+    </div>
+    <br>
+    <div>
+        <label for="direccion">eliminado</label>
+        <select formControlName="eliminado" [(ngModel)]="datax.eliminado">
+            <option value="0">no</option>
+            <option value="1">si</option>
+        </select>
+
+
+    </div>
+    <br>
+    <div>
+        <button type="submit" [disabled]="!formulario.value">enviar</button>
+    </div>
+</form>
